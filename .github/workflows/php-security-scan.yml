@@ -60,6 +60,11 @@ jobs:
             --report-json=reports/phpcs-security.json \
             .
 
+      - name: Beautify JSON report
+        run: |
+          python -m json.tool reports/phpcs-security.json > reports/phpcs-security.pretty.json
+          mv reports/phpcs-security.pretty.json reports/phpcs-security.json
+
       - name: Commit security report
         if: github.event_name != 'pull_request'
         run: |
