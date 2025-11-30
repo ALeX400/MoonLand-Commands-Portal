@@ -2,12 +2,10 @@ name: PHP Security Scan
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 3 * * *"
   push:
+  pull_request:
     branches:
       - main
-  pull_request:
 
 jobs:
   static-security-scan:
@@ -62,8 +60,15 @@ jobs:
             --report-json=reports/phpcs-security.json \
             .
 
-      - name: Upload security scan report
-        uses: actions/upload-artifact@v4
-        with:
-          name: phpcs-security-report
-          path: reports/
+      - name: Commit security report
+        if: github.event_name != 'pull_request'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain -- reports/phpcs-security.txt reports/phpcs-security.json 2>/dev/null)" ]; then
+            git add reports/phpcs-security.txt reports/phpcs-security.json
+            git commit -m "chore: update PHP security scan report" || echo "No changes to commit"
+            git push
+          else
+            echo "No report changes to commit"
+          fi
