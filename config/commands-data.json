@@ -1,0 +1,553 @@
+{
+    "languages": [
+        "ro",
+        "en"
+    ],
+    "defaultLanguage": "ro",
+    "translations": {
+        "ro": {
+            "meta": {
+                "siteTitle": "Comenzi Minecraft MoonLand",
+                "siteTagline": "Documentatie rapida pentru jucatorii MoonLand",
+                "discordUrl": "https://discord.moonland.ro/"
+            },
+            "hero": {
+                "title": "Descopera comenzile MoonLand",
+                "description": "Ghid interactiv pentru toate comenzile esentiale de pe serverul MoonLand. Exploreaza, colaboreaza si protejeaza-ti baza cu usurinta.",
+                "primaryCta": {
+                    "label": "Catalog comenzi",
+                    "href": "#catalog"
+                },
+                "secondaryCta": {
+                    "label": "Server Discord",
+                    "href": "https://discord.moonland.ro/",
+                    "target": "_blank",
+                    "rel": "noopener"
+                },
+                "logo": {
+                    "visible": true,
+                    "url": "https://moonland.ro/images/logo.svg"
+                }
+            },
+            "infoStrip": {
+                "enabled": false,
+                "cards": [
+                    {
+                        "icon": "",
+                        "title": "Adresa server",
+                        "description": ""
+                    },
+                    {
+                        "icon": "",
+                        "title": "Versiune recomandata",
+                        "description": ""
+                    },
+                    {
+                        "icon": "",
+                        "title": "Program staff",
+                        "description": ""
+                    },
+                    {
+                        "icon": "",
+                        "title": "Ultima actualizare",
+                        "description": ""
+                    }
+                ]
+            },
+            "guide": {
+                "title": "Cum folosesti comenzile in siguranta",
+                "description": "Parcurge pasii de mai jos pentru a te familiariza cu mecanicile principale ale serverului in mai putin de cinci minute.",
+                "steps": [
+                    {
+                        "title": "Verifica regulile",
+                        "summary": "Ruleaza comanda /rules pentru a evita sanctiunile inutile.",
+                        "commands": [
+                            "/rules"
+                        ]
+                    },
+                    {
+                        "title": "Protejeaza constructiile",
+                        "summary": "Stabileste claim si ofera acces partenerilor de echipa.",
+                        "commands": [
+                            "/claim",
+                            "/trust",
+                            "/untrust"
+                        ]
+                    },
+                    {
+                        "title": "Optimizeaza economia",
+                        "summary": "Monitorizeaza balanta, joburile si comerciantii globali.",
+                        "commands": [
+                            "/bal",
+                            "/jobs browse",
+                            "/shop",
+                            "/ah"
+                        ]
+                    }
+                ]
+            },
+            "catalog": {
+                "title": "Catalog complet",
+                "categories": [
+                    {
+                        "title": "Baza si navigare",
+                        "summary": "Comenzi uzuale pentru teleportare si plasarea punctelor de interes.",
+                        "commands": [
+                            {
+                                "label": "/spawn",
+                                "usage": "/spawn",
+                                "description": "Teleporteaza direct catre punctul central al hub-ului."
+                            },
+                            {
+                                "label": "/sethome",
+                                "usage": "/sethome [nume]",
+                                "description": "Memoreaza locatia curenta pentru intoarceri rapide."
+                            },
+                            {
+                                "label": "/home",
+                                "usage": "/home [nume]",
+                                "description": "Revine la unul dintre punctele salvate cu /sethome."
+                            },
+                            {
+                                "label": "/tpa",
+                                "usage": "/tpa <jucator>",
+                                "description": "Trimite o cerere de teleportare catre un alt jucator."
+                            },
+                            {
+                                "label": "/tpaccept",
+                                "usage": "/tpaccept",
+                                "description": "Confirma cererea de teleportare primita."
+                            },
+                            {
+                                "label": "/ignore",
+                                "usage": "/ignore <jucator>",
+                                "description": "Blocheaza mesajele unui jucator individual."
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Economia serverului",
+                        "summary": "Monitorizeaza balanta, licitatiile si venituri suplimentare.",
+                        "commands": [
+                            {
+                                "label": "/bal",
+                                "usage": "/bal",
+                                "description": "Afiseaza balanta curenta."
+                            },
+                            {
+                                "label": "/pay",
+                                "usage": "/pay <jucator> <suma>",
+                                "description": "Transfera rapid monede altor jucatori."
+                            },
+                            {
+                                "label": "/shop",
+                                "usage": "/shop",
+                                "description": "Deschide magazinul global cu obiecte utile."
+                            },
+                            {
+                                "label": "/ah",
+                                "usage": "/ah",
+                                "description": "Acceseaza casa de licitatii pentru schimburi intre jucatori."
+                            },
+                            {
+                                "label": "/jobs browse",
+                                "usage": "/jobs browse",
+                                "description": "Afiseaza lista joburilor active pentru venit pasiv."
+                            },
+                            {
+                                "label": "/baltop",
+                                "usage": "/baltop",
+                                "description": "Clasament al celor mai bogati jucatori."
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Protectie teren",
+                        "summary": "Gestioneaza claim-urile si drepturile de acces.",
+                        "commands": [
+                            {
+                                "label": "/claim",
+                                "usage": "/claim",
+                                "description": "Revendica zona curenta pentru protectie."
+                            },
+                            {
+                                "label": "/trust",
+                                "usage": "/trust <jucator>",
+                                "description": "Ofera acces unui jucator in claim-ul tau."
+                            },
+                            {
+                                "label": "/untrust",
+                                "usage": "/untrust <jucator>",
+                                "description": "Revoca accesul unui jucator in claim."
+                            },
+                            {
+                                "label": "/claimslist",
+                                "usage": "/claimslist",
+                                "description": "Listeaza toate terenurile revendicate de tine."
+                            },
+                            {
+                                "label": "/abandonclaim",
+                                "usage": "/abandonclaim",
+                                "description": "Elibereaza terenul curent."
+                            },
+                            {
+                                "label": "/map",
+                                "usage": "/map",
+                                "description": "Deschide harta web pentru vizualizarea revindicarii."
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Social si comunitate",
+                        "summary": "Ramai conectat cu echipa si evenimentele comunitatii.",
+                        "commands": [
+                            {
+                                "label": "/discord",
+                                "usage": "/discord",
+                                "description": "Primeste invitatia catre serverul oficial Discord."
+                            },
+                            {
+                                "label": "/vote",
+                                "usage": "/vote",
+                                "description": "Voteaza MoonLand si colecteaza recompense periodice."
+                            },
+                            {
+                                "label": "/daily",
+                                "usage": "/daily",
+                                "description": "Obtine bonusul zilnic de activitate."
+                            },
+                            {
+                                "label": "/mail send",
+                                "usage": "/mail send <jucator> <mesaj>",
+                                "description": "Trimite un mesaj unui jucator offline."
+                            },
+                            {
+                                "label": "/nickname",
+                                "usage": "/nickname <text>",
+                                "description": "Actualizeaza supranumele afisat."
+                            },
+                            {
+                                "label": "/msg",
+                                "usage": "/msg <jucator> <mesaj>",
+                                "description": "Conversatie privata intre doi jucatori."
+                            }
+                        ]
+                    }
+                ],
+                "subtitle": "Comenzi uzuale pentru teleportare si plasarea punctelor de interes.",
+                "description": "Comenzi uzuale pentru teleportare si plasarea punctelor de interes.",
+                "ctaLabel": "cere ajutor",
+                "ctaHref": "https://discord.moonland.ro/"
+            },
+            "tips": {
+                "title": "Recomandari rapide",
+                "items": [
+                    "Pastreaza un home aproape de spawn pentru intoarcere rapida.",
+                    "Organizeaza-ti kiturile economice pentru a profita de joburi.",
+                    "Noteaza coordonatele bazelor in cartea personala.",
+                    "Foloseste claims mici si precise pentru optimizarea resurselor."
+                ]
+            },
+            "faq": {
+                "title": "Intrebari frecvente",
+                "items": [
+                    {
+                        "question": "Cum intru pe server?",
+                        "answer": "Adauga IP-ul moonland.ro in lista de servere si conecteaza-te. Pe Bedrock foloseste portul 19132."
+                    },
+                    {
+                        "question": "Ce versiuni sunt suportate?",
+                        "answer": "Serverul accepta editie Java moderna si cateva versiuni anterioare. Recomandam ultima versiune stabila."
+                    },
+                    {
+                        "question": "Cum raportez o problema?",
+                        "answer": "Acceseaza Discord si deschide un ticket in canalul de suport cu detalii si dovezi."
+                    }
+                ]
+            },
+            "footer": {
+                "text": "MoonLand Network - Comunitate Minecraft",
+                "links": [
+                    {
+                        "label": "Website oficial",
+                        "href": "https://moonland.ro/",
+                        "target": "",
+                        "rel": ""
+                    }
+                ]
+            }
+        },
+        "en": {
+            "meta": {
+                "siteTitle": "MoonLand Minecraft Commands",
+                "siteTagline": "Fast documentation for MoonLand players",
+                "discordUrl": "https://discord.moonland.ro/"
+            },
+            "hero": {
+                "title": "Discover MoonLand commands",
+                "description": "Interactive guide for all essential commands on the MoonLand server. Explore, collaborate, and protect your base with ease.",
+                "primaryCta": {
+                    "label": "Commands catalog",
+                    "href": "#catalog"
+                },
+                "secondaryCta": {
+                    "label": "Discord server",
+                    "href": "https://discord.moonland.ro/",
+                    "target": "_blank",
+                    "rel": "noopener"
+                },
+                "logo": {
+                    "visible": true,
+                    "url": "https://moonland.ro/images/logo.svg"
+                }
+            },
+            "infoStrip": {
+                "enabled": false,
+                "cards": [
+                    {
+                        "icon": "",
+                        "title": "Server address",
+                        "description": ""
+                    },
+                    {
+                        "icon": "",
+                        "title": "Recommended version",
+                        "description": ""
+                    },
+                    {
+                        "icon": "",
+                        "title": "Staff schedule",
+                        "description": ""
+                    },
+                    {
+                        "icon": "",
+                        "title": "Last update",
+                        "description": ""
+                    }
+                ]
+            },
+            "guide": {
+                "title": "How to use the commands safely",
+                "description": "Follow the steps below to learn the main server mechanics in under five minutes.",
+                "steps": [
+                    {
+                        "title": "Check the rules",
+                        "summary": "Run /rules to avoid unnecessary sanctions.",
+                        "commands": [
+                            "/rules"
+                        ]
+                    },
+                    {
+                        "title": "Protect your builds",
+                        "summary": "Set claims and grant access to teammates.",
+                        "commands": [
+                            "/claim",
+                            "/trust",
+                            "/untrust"
+                        ]
+                    },
+                    {
+                        "title": "Optimize the economy",
+                        "summary": "Monitor balance, jobs, and global merchants.",
+                        "commands": [
+                            "/bal",
+                            "/jobs browse",
+                            "/shop",
+                            "/ah"
+                        ]
+                    }
+                ]
+            },
+            "catalog": {
+                "title": "Complete catalog",
+                "categories": [
+                    {
+                        "title": "Base and navigation",
+                        "summary": "Common commands for teleportation and waypoints.",
+                        "commands": [
+                            {
+                                "label": "/spawn",
+                                "usage": "/spawn",
+                                "description": "Teleport directly to the central hub."
+                            },
+                            {
+                                "label": "/sethome",
+                                "usage": "/sethome [name]",
+                                "description": "Save the current location for quick returns."
+                            },
+                            {
+                                "label": "/home",
+                                "usage": "/home [name]",
+                                "description": "Go back to one of the saved homes."
+                            },
+                            {
+                                "label": "/tpa",
+                                "usage": "/tpa <player>",
+                                "description": "Send a teleport request to another player."
+                            },
+                            {
+                                "label": "/tpaccept",
+                                "usage": "/tpaccept",
+                                "description": "Accept a received teleport request."
+                            },
+                            {
+                                "label": "/ignore",
+                                "usage": "/ignore <player>",
+                                "description": "Block messages from a specific player."
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Server economy",
+                        "summary": "Track balances, auctions, and extra income.",
+                        "commands": [
+                            {
+                                "label": "/bal",
+                                "usage": "/bal",
+                                "description": "Show your current balance."
+                            },
+                            {
+                                "label": "/pay",
+                                "usage": "/pay <player> <amount>",
+                                "description": "Send coins to other players."
+                            },
+                            {
+                                "label": "/shop",
+                                "usage": "/shop",
+                                "description": "Open the global shop with useful items."
+                            },
+                            {
+                                "label": "/ah",
+                                "usage": "/ah",
+                                "description": "Access the auction house for trades."
+                            },
+                            {
+                                "label": "/jobs browse",
+                                "usage": "/jobs browse",
+                                "description": "Display the list of active jobs."
+                            },
+                            {
+                                "label": "/baltop",
+                                "usage": "/baltop",
+                                "description": "Leaderboard of the richest players."
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Land protection",
+                        "summary": "Manage claims and access rights.",
+                        "commands": [
+                            {
+                                "label": "/claim",
+                                "usage": "/claim",
+                                "description": "Claim the current area for protection."
+                            },
+                            {
+                                "label": "/trust",
+                                "usage": "/trust <player>",
+                                "description": "Grant a player access to your claim."
+                            },
+                            {
+                                "label": "/untrust",
+                                "usage": "/untrust <player>",
+                                "description": "Remove a player's access from the claim."
+                            },
+                            {
+                                "label": "/claimslist",
+                                "usage": "/claimslist",
+                                "description": "List all claims you own."
+                            },
+                            {
+                                "label": "/abandonclaim",
+                                "usage": "/abandonclaim",
+                                "description": "Release the current claim."
+                            },
+                            {
+                                "label": "/map",
+                                "usage": "/map",
+                                "description": "Open the web map to view claims."
+                            }
+                        ]
+                    },
+                    {
+                        "title": "Social and community",
+                        "summary": "Stay connected with the team and events.",
+                        "commands": [
+                            {
+                                "label": "/discord",
+                                "usage": "/discord",
+                                "description": "Get the invite to the official Discord."
+                            },
+                            {
+                                "label": "/vote",
+                                "usage": "/vote",
+                                "description": "Vote for MoonLand and earn periodic rewards."
+                            },
+                            {
+                                "label": "/daily",
+                                "usage": "/daily",
+                                "description": "Claim the daily activity bonus."
+                            },
+                            {
+                                "label": "/mail send",
+                                "usage": "/mail send <player> <message>",
+                                "description": "Send a message to an offline player."
+                            },
+                            {
+                                "label": "/nickname",
+                                "usage": "/nickname <text>",
+                                "description": "Update the displayed nickname."
+                            },
+                            {
+                                "label": "/msg",
+                                "usage": "/msg <player> <message>",
+                                "description": "Private conversation between two players."
+                            }
+                        ]
+                    }
+                ],
+                "subtitle": "Common commands for teleportation and placing points of interest.",
+                "description": "Common commands for teleportation and placing points of interest.",
+                "ctaLabel": "ask for help",
+                "ctaHref": "https://discord.moonland.ro/"
+            },
+            "tips": {
+                "title": "Quick recommendations",
+                "items": [
+                    "Keep a home close to spawn for quick return.",
+                    "Organize your economic kits to take advantage of jobs.",
+                    "Write down base coordinates in your personal book.",
+                    "Use small and precise claims to optimize resources."
+                ]
+            },
+            "faq": {
+                "title": "Frequently asked questions",
+                "items": [
+                    {
+                        "question": "How do I join the server?",
+                        "answer": "Add moonland.ro to the multiplayer list and connect. On Bedrock use port 19132."
+                    },
+                    {
+                        "question": "Which versions are supported?",
+                        "answer": "The server supports modern Java edition plus some previous versions. We recommend the latest stable one."
+                    },
+                    {
+                        "question": "How do I report an issue?",
+                        "answer": "Join Discord and open a support ticket with details and evidence."
+                    }
+                ]
+            },
+            "footer": {
+                "text": "MoonLand Network - Minecraft Community",
+                "links": [
+                    {
+                        "label": "Official website",
+                        "href": "https://moonland.ro/",
+                        "target": "",
+                        "rel": ""
+                    }
+                ]
+            }
+        }
+    }
+}

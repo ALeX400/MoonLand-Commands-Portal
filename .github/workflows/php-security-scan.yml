@@ -1,0 +1,55 @@
+name: PHP Security Scan
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 3 * * *"
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  static-security-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.2"
+          extensions: mbstring, intl
+          coverage: none
+
+      - name: PHP syntax check
+        run: |
+          set -e
+          if find . -path './.git' -prune -o -name '*.php' -print | grep -q '\.php$'; then
+            find . -path './.git' -prune -o -name '*.php' -print0 \
+              | xargs -0 -n 1 -P 4 php -l
+          else
+            echo "No PHP files found to lint."
+          fi
+
+      - name: Download PHP_CodeSniffer
+        run: |
+          curl -Ls https://github.com/squizlabs/PHP_CodeSniffer/releases/latest/download/phpcs.phar -o phpcs.phar
+          php phpcs.phar --version
+
+      - name: Install Security Audit ruleset
+        run: |
+          curl -Ls https://github.com/FloeDesignTechnologies/phpcs-security-audit/archive/refs/heads/master.tar.gz -o security-audit.tar.gz
+          mkdir security-audit
+          tar -xzf security-audit.tar.gz --strip-components=1 -C security-audit
+
+      - name: Run PHP security sniffer
+        run: |
+          php phpcs.phar \
+            --standard="$(pwd)/security-audit/phpcs-security-audit.xml" \
+            --severity=5 \
+            --extensions=php \
+            --ignore=vendor/,node_modules/,storage/,cache/ \
+            --report=full \
+            .
