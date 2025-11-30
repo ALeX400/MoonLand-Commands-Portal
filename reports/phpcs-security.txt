@@ -1,0 +1,62 @@
+
+FILE: ...MoonLand-Commands-Portal/MoonLand-Commands-Portal/admin/save.php
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 5 WARNINGS AFFECTING 3 LINES
+----------------------------------------------------------------------
+  93 | WARNING | Function array_filter() that supports callback
+     |         | detected
+  93 | WARNING | Function array_map() that supports callback detected
+  95 | WARNING | Function array_filter() that supports callback
+     |         | detected
+  95 | WARNING | Function array_map() that supports callback detected
+ 132 | WARNING | Function array_map() that supports callback detected
+----------------------------------------------------------------------
+
+
+FILE: ...oonLand-Commands-Portal/MoonLand-Commands-Portal/admin/index.php
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 2 WARNINGS AFFECTING 2 LINES
+----------------------------------------------------------------------
+ 107 | WARNING | Filesystem function is_file() detected with dynamic
+     |         | parameter
+ 110 | WARNING | Filesystem function file_get_contents() detected
+     |         | with dynamic parameter
+----------------------------------------------------------------------
+
+
+FILE: ...nLand-Commands-Portal/MoonLand-Commands-Portal/lib/DataStore.php
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 9 WARNINGS AFFECTING 8 LINES
+----------------------------------------------------------------------
+ 16 | WARNING | Filesystem function is_file() detected with dynamic
+    |         | parameter
+ 20 | WARNING | Filesystem function file_get_contents() detected with
+    |         | dynamic parameter
+ 32 | WARNING | Filesystem function dirname() detected with dynamic
+    |         | parameter
+ 33 | WARNING | Filesystem function is_dir() detected with dynamic
+    |         | parameter
+ 34 | WARNING | Filesystem function mkdir() detected with dynamic
+    |         | parameter
+ 34 | WARNING | Filesystem function is_dir() detected with dynamic
+    |         | parameter
+ 44 | WARNING | Filesystem function file_put_contents() detected with
+    |         | dynamic parameter
+ 49 | WARNING | Filesystem function is_file() detected with dynamic
+    |         | parameter
+ 53 | WARNING | Filesystem function filemtime() detected with dynamic
+    |         | parameter
+----------------------------------------------------------------------
+
+
+FILE: ...work/MoonLand-Commands-Portal/MoonLand-Commands-Portal/index.php
+----------------------------------------------------------------------
+FOUND 0 ERRORS AND 2 WARNINGS AFFECTING 2 LINES
+----------------------------------------------------------------------
+ 67 | WARNING | Filesystem function is_file() detected with dynamic
+    |         | parameter
+ 70 | WARNING | Filesystem function file_get_contents() detected with
+    |         | dynamic parameter
+----------------------------------------------------------------------
+
+
