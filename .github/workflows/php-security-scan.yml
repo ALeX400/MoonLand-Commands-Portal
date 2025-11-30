@@ -49,7 +49,7 @@ jobs:
       - name: Run PHP security sniffer
         run: |
           php phpcs.phar \
-            --standard=SecurityAudit \
+            --standard=Security \
             --severity=5 \
             --extensions=php \
             --ignore=vendor/,node_modules/,storage/,cache/ \
