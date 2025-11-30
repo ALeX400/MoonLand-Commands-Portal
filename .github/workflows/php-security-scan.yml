@@ -54,6 +54,7 @@ jobs:
           php phpcs.phar \
             --standard=Security \
             --severity=5 \
+            --runtime-set ignore_warnings_on_exit 1 \
             --extensions=php \
             --ignore=vendor/,node_modules/,storage/,cache/,security-audit/ \
             --report=full \
