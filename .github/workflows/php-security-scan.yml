@@ -46,12 +46,23 @@ jobs:
           php phpcs.phar --config-set installed_paths "$(pwd)/security-audit"
           php phpcs.phar -i
 
+      - name: Prepare report directory
+        run: mkdir -p reports
+
       - name: Run PHP security sniffer
         run: |
           php phpcs.phar \
             --standard=Security \
             --severity=5 \
             --extensions=php \
-            --ignore=vendor/,node_modules/,storage/,cache/ \
+            --ignore=vendor/,node_modules/,storage/,cache/,security-audit/ \
             --report=full \
+            --report-file=reports/phpcs-security.txt \
+            --report-json=reports/phpcs-security.json \
             .
+
+      - name: Upload security scan report
+        uses: actions/upload-artifact@v4
+        with:
+          name: phpcs-security-report
+          path: reports/
