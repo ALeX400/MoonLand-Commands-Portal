@@ -43,11 +43,13 @@ jobs:
           curl -Ls https://github.com/FloeDesignTechnologies/phpcs-security-audit/archive/refs/heads/master.tar.gz -o security-audit.tar.gz
           mkdir security-audit
           tar -xzf security-audit.tar.gz --strip-components=1 -C security-audit
+          php phpcs.phar --config-set installed_paths "$(pwd)/security-audit"
+          php phpcs.phar -i
 
       - name: Run PHP security sniffer
         run: |
           php phpcs.phar \
-            --standard="$(pwd)/security-audit/phpcs-security-audit.xml" \
+            --standard=SecurityAudit \
             --severity=5 \
             --extensions=php \
             --ignore=vendor/,node_modules/,storage/,cache/ \
